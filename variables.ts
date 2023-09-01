@@ -1,7 +1,7 @@
 const ENV = Deno.env.toObject();
 
 /** `true` for all jobs executed in CI/CD. */
-export const CI = ENV.CI === 'true';
+export const CI = ENV.CI === "true";
 
 /** The GitLab API v4 root URL. */
 export const CI_API_V4_URL = ENV.CI_API_V4_URL;
@@ -31,7 +31,7 @@ export const CI_COMMIT_MESSAGE = ENV.CI_COMMIT_MESSAGE;
 export const CI_COMMIT_REF_NAME = ENV.CI_COMMIT_REF_NAME;
 
 /** `true` if the job is running for a protected reference, `false` otherwise. */
-export const CI_COMMIT_REF_PROTECTED = ENV.CI_COMMIT_REF_PROTECTED === 'true';
+export const CI_COMMIT_REF_PROTECTED = ENV.CI_COMMIT_REF_PROTECTED === "true";
 
 /** `CI_COMMIT_REF_NAME` in lowercase, shortened to 63 bytes, and with everything except `0-9` and `a-z` replaced with `-`. No leading / trailing `-`. Use in URLs, host names and domain names. */
 export const CI_COMMIT_REF_SLUG = ENV.CI_COMMIT_REF_SLUG;
@@ -64,10 +64,10 @@ export const CI_CONCURRENT_PROJECT_ID = ENV.CI_CONCURRENT_PROJECT_ID;
 export const CI_CONFIG_PATH = ENV.CI_CONFIG_PATH;
 
 /** `true` if [debug logging (tracing)](https://docs.gitlab.com/ee/ci/variables/index.html#enable-debug-logging) is enabled. */
-export const CI_DEBUG_TRACE = ENV.CI_DEBUG_TRACE === 'true';
+export const CI_DEBUG_TRACE = ENV.CI_DEBUG_TRACE === "true";
 
 /** `true` if [service container logging](https://docs.gitlab.com/ee/ci/services/index.html#capturing-service-container-logs) is enabled. */
-export const CI_DEBUG_SERVICES = ENV.CI_DEBUG_SERVICES === 'true';
+export const CI_DEBUG_SERVICES = ENV.CI_DEBUG_SERVICES === "true";
 
 /** The name of the project’s default branch. */
 export const CI_DEFAULT_BRANCH = ENV.CI_DEFAULT_BRANCH;
@@ -76,8 +76,7 @@ export const CI_DEFAULT_BRANCH = ENV.CI_DEFAULT_BRANCH;
 export const CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX = ENV.CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX;
 
 /** The direct group image prefix for pulling images through the Dependency Proxy. */
-export const CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX =
-  ENV.CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX;
+export const CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX = ENV.CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX;
 
 /** The password to pull images through the Dependency Proxy. */
 export const CI_DEPENDENCY_PROXY_PASSWORD = ENV.CI_DEPENDENCY_PROXY_PASSWORD;
@@ -89,7 +88,7 @@ export const CI_DEPENDENCY_PROXY_SERVER = ENV.CI_DEPENDENCY_PROXY_SERVER;
 export const CI_DEPENDENCY_PROXY_USER = ENV.CI_DEPENDENCY_PROXY_USER;
 
 /** `true` if the pipeline runs during a [deploy freeze window](https://docs.gitlab.com/ee/user/project/releases/index.html#prevent-unintentional-releases-by-setting-a-deploy-freeze). */
-export const CI_DEPLOY_FREEZE = ENV.CI_DEPLOY_FREEZE === 'true';
+export const CI_DEPLOY_FREEZE = ENV.CI_DEPLOY_FREEZE === "true";
 
 /** The authentication password of the [GitLab Deploy Token](https://docs.gitlab.com/ee/user/project/deploy_tokens/index.html#gitlab-deploy-token), if the project has one. */
 export const CI_DEPLOY_PASSWORD = ENV.CI_DEPLOY_PASSWORD;
@@ -110,7 +109,7 @@ export const CI_ENVIRONMENT_SLUG = ENV.CI_ENVIRONMENT_SLUG;
 export const CI_ENVIRONMENT_URL = ENV.CI_ENVIRONMENT_URL;
 
 /** The action annotation specified for this job’s environment. Available if [`environment:action`](https://docs.gitlab.com/ee/ci/yaml/index.html#environmentaction) is set. */
-export const CI_ENVIRONMENT_ACTION = ENV.CI_ENVIRONMENT_ACTION as 'start' | 'prepare' | 'stop';
+export const CI_ENVIRONMENT_ACTION = ENV.CI_ENVIRONMENT_ACTION as "start" | "prepare" | "stop";
 
 /** The [deployment tier of the environment](https://docs.gitlab.com/ee/ci/environments/index.html#deployment-tier-of-environments) for this job. */
 export const CI_ENVIRONMENT_TIER = ENV.CI_ENVIRONMENT_TIER;
@@ -119,10 +118,10 @@ export const CI_ENVIRONMENT_TIER = ENV.CI_ENVIRONMENT_TIER;
 export const CI_RELEASE_DESCRIPTION = ENV.CI_RELEASE_DESCRIPTION;
 
 /** `true` if [FIPS mode](https://docs.gitlab.com/ee/development/fips_compliance.html) is enabled in the GitLab instance. */
-export const CI_GITLAB_FIPS_MODE = ENV.CI_GITLAB_FIPS_MODE === 'true';
+export const CI_GITLAB_FIPS_MODE = ENV.CI_GITLAB_FIPS_MODE === "true";
 
 /** `true` if the pipeline’s project has an open [requirement](https://docs.gitlab.com/ee/user/project/requirements/index.html). */
-export const CI_HAS_OPEN_REQUIREMENTS = ENV.CI_HAS_OPEN_REQUIREMENTS === 'true';
+export const CI_HAS_OPEN_REQUIREMENTS = ENV.CI_HAS_OPEN_REQUIREMENTS === "true";
 
 /** The internal ID of the job, unique across all jobs in the GitLab instance. */
 export const CI_JOB_ID = ENV.CI_JOB_ID;
@@ -131,7 +130,7 @@ export const CI_JOB_ID = ENV.CI_JOB_ID;
 export const CI_JOB_IMAGE = ENV.CI_JOB_IMAGE;
 
 /** `true` if the job was started manually. */
-export const CI_JOB_MANUAL = ENV.CI_JOB_MANUAL === 'true';
+export const CI_JOB_MANUAL = ENV.CI_JOB_MANUAL === "true";
 
 /** The name of the job. */
 export const CI_JOB_NAME = ENV.CI_JOB_NAME;
@@ -143,7 +142,7 @@ export const CI_JOB_NAME_SLUG = ENV.CI_JOB_NAME_SLUG;
 export const CI_JOB_STAGE = ENV.CI_JOB_STAGE;
 
 /** The status of the job as each runner stage is executed. Use with [`after_script`](https://docs.gitlab.com/ee/ci/yaml/index.html#after_script). */
-export const CI_JOB_STATUS = ENV.CI_JOB_STATUS as 'success' | 'failed' | 'canceled';
+export const CI_JOB_STATUS = ENV.CI_JOB_STATUS as "success" | "failed" | "canceled";
 
 /** The job timeout, in seconds. */
 export const CI_JOB_TIMEOUT = ENV.CI_JOB_TIMEOUT;
@@ -158,7 +157,7 @@ export const CI_JOB_URL = ENV.CI_JOB_URL;
 export const CI_JOB_STARTED_AT = new Date(ENV.CI_JOB_STARTED_AT);
 
 /** `true` if the pipeline has a Kubernetes cluster available for deployments. */
-export const CI_KUBERNETES_ACTIVE = ENV.CI_KUBERNETES_ACTIVE === 'true';
+export const CI_KUBERNETES_ACTIVE = ENV.CI_KUBERNETES_ACTIVE === "true";
 
 /** The index of the job in the job set. Only available if the job uses [`parallel`](https://docs.gitlab.com/ee/ci/yaml/index.html#parallel). */
 export const CI_NODE_INDEX = ENV.CI_NODE_INDEX;
@@ -182,22 +181,10 @@ export const CI_PIPELINE_ID = ENV.CI_PIPELINE_ID;
 export const CI_PIPELINE_IID = ENV.CI_PIPELINE_IID;
 
 /** How the pipeline was triggered. For a description of each value, see [Common `if` clauses for `rules`](https://docs.gitlab.com/ee/ci/jobs/job_control.html#common-if-clauses-for-rules), which uses this variable to control when jobs run. */
-export const CI_PIPELINE_SOURCE = ENV.CI_PIPELINE_SOURCE as
-  | 'push'
-  | 'web'
-  | 'schedule'
-  | 'api'
-  | 'external'
-  | 'chat'
-  | 'webide'
-  | 'merge_request_event'
-  | 'external_pull_request_event'
-  | 'parent_pipeline'
-  | 'trigger'
-  | 'pipeline';
+export const CI_PIPELINE_SOURCE = ENV.CI_PIPELINE_SOURCE as "push" | "web" | "schedule" | "api" | "external" | "chat" | "webide" | "merge_request_event" | "external_pull_request_event" | "parent_pipeline" | "trigger" | "pipeline";
 
 /** `true` if the job was [triggered](https://docs.gitlab.com/ee/ci/triggers/index.html). */
-export const CI_PIPELINE_TRIGGERED = ENV.CI_PIPELINE_TRIGGERED === 'true';
+export const CI_PIPELINE_TRIGGERED = ENV.CI_PIPELINE_TRIGGERED === "true";
 
 /** The URL for the pipeline details. */
 export const CI_PIPELINE_URL = ENV.CI_PIPELINE_URL;
@@ -245,7 +232,7 @@ export const CI_PROJECT_DESCRIPTION = ENV.CI_PROJECT_DESCRIPTION;
 export const CI_PROJECT_URL = ENV.CI_PROJECT_URL;
 
 /** The project visibility. */
-export const CI_PROJECT_VISIBILITY = ENV.CI_PROJECT_VISIBILITY as 'internal' | 'private' | 'public';
+export const CI_PROJECT_VISIBILITY = ENV.CI_PROJECT_VISIBILITY as "internal" | "private" | "public";
 
 /** The project [external authorization classification label](https://docs.gitlab.com/ee/administration/settings/external_authorization.html). */
 export const CI_PROJECT_CLASSIFICATION_LABEL = ENV.CI_PROJECT_CLASSIFICATION_LABEL;
@@ -332,16 +319,16 @@ export const CI_SERVER_VERSION_PATCH = ENV.CI_SERVER_VERSION_PATCH;
 export const CI_SERVER_VERSION = ENV.CI_SERVER_VERSION;
 
 /** `true` for all jobs executed in CI/CD. */
-export const CI_SERVER = ENV.CI_SERVER === 'yes';
+export const CI_SERVER = ENV.CI_SERVER === "yes";
 
 /** `true` if the job is executed in a shared environment (something that is persisted across CI/CD invocations, like the `shell` or `ssh` executor). */
-export const CI_SHARED_ENVIRONMENT = ENV.CI_SHARED_ENVIRONMENT === 'true';
+export const CI_SHARED_ENVIRONMENT = ENV.CI_SHARED_ENVIRONMENT === "true";
 
 /** The host of the registry used by CI/CD templates. Defaults to `registry.gitlab.com`. */
 export const CI_TEMPLATE_REGISTRY_HOST = ENV.CI_TEMPLATE_REGISTRY_HOST;
 
 /** `true` for all jobs executed in CI/CD. */
-export const GITLAB_CI = ENV.GITLAB_CI === 'true';
+export const GITLAB_CI = ENV.GITLAB_CI === "true";
 
 /** The comma-separated list of licensed features available for the GitLab instance and license. */
 export const GITLAB_FEATURES = ENV.GITLAB_FEATURES;
@@ -365,7 +352,7 @@ export const KUBECONFIG = ENV.KUBECONFIG;
 export const TRIGGER_PAYLOAD = ENV.TRIGGER_PAYLOAD;
 
 /** Approval status of the merge request. `true` when [merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/index.html) is available and the merge request has been approved. */
-export const CI_MERGE_REQUEST_APPROVED = ENV.CI_MERGE_REQUEST_APPROVED === 'true';
+export const CI_MERGE_REQUEST_APPROVED = ENV.CI_MERGE_REQUEST_APPROVED === "true";
 
 /** Comma-separated list of usernames of assignees for the merge request. */
 export const CI_MERGE_REQUEST_ASSIGNEES = ENV.CI_MERGE_REQUEST_ASSIGNEES;
@@ -395,14 +382,13 @@ export const CI_MERGE_REQUEST_PROJECT_URL = ENV.CI_MERGE_REQUEST_PROJECT_URL;
 export const CI_MERGE_REQUEST_REF_PATH = ENV.CI_MERGE_REQUEST_REF_PATH;
 
 /** `true` when the [squash on merge](https://docs.gitlab.com/ee/user/project/merge_requests/squash_and_merge.html) option is set. */
-export const CI_MERGE_REQUEST_SQUASH_ON_MERGE = ENV.CI_MERGE_REQUEST_SQUASH_ON_MERGE === 'true';
+export const CI_MERGE_REQUEST_SQUASH_ON_MERGE = ENV.CI_MERGE_REQUEST_SQUASH_ON_MERGE === "true";
 
 /** The source branch name of the merge request. */
 export const CI_MERGE_REQUEST_SOURCE_BRANCH_NAME = ENV.CI_MERGE_REQUEST_SOURCE_BRANCH_NAME;
 
 /** `true` when the source branch of the merge request is [protected](https://docs.gitlab.com/ee/user/project/protected_branches.html). */
-export const CI_MERGE_REQUEST_SOURCE_BRANCH_PROTECTED =
-  ENV.CI_MERGE_REQUEST_SOURCE_BRANCH_PROTECTED === 'true';
+export const CI_MERGE_REQUEST_SOURCE_BRANCH_PROTECTED = ENV.CI_MERGE_REQUEST_SOURCE_BRANCH_PROTECTED === "true";
 
 /** The HEAD SHA of the source branch of the merge request. The variable is empty in merge request pipelines. The SHA is present only in [merged results pipelines](https://docs.gitlab.com/ee/ci/pipelines/merged_results_pipelines.html). */
 export const CI_MERGE_REQUEST_SOURCE_BRANCH_SHA = ENV.CI_MERGE_REQUEST_SOURCE_BRANCH_SHA;
@@ -420,8 +406,7 @@ export const CI_MERGE_REQUEST_SOURCE_PROJECT_URL = ENV.CI_MERGE_REQUEST_SOURCE_P
 export const CI_MERGE_REQUEST_TARGET_BRANCH_NAME = ENV.CI_MERGE_REQUEST_TARGET_BRANCH_NAME;
 
 /** `true` when the target branch of the merge request is [protected](https://docs.gitlab.com/ee/user/project/protected_branches.html). */
-export const CI_MERGE_REQUEST_TARGET_BRANCH_PROTECTED =
-  ENV.CI_MERGE_REQUEST_TARGET_BRANCH_PROTECTED === 'true';
+export const CI_MERGE_REQUEST_TARGET_BRANCH_PROTECTED = ENV.CI_MERGE_REQUEST_TARGET_BRANCH_PROTECTED === "true";
 
 /** The HEAD SHA of the target branch of the merge request. The variable is empty in merge request pipelines. The SHA is present only in [merged results pipelines](https://docs.gitlab.com/ee/ci/pipelines/merged_results_pipelines.html). */
 export const CI_MERGE_REQUEST_TARGET_BRANCH_SHA = ENV.CI_MERGE_REQUEST_TARGET_BRANCH_SHA;
@@ -430,10 +415,7 @@ export const CI_MERGE_REQUEST_TARGET_BRANCH_SHA = ENV.CI_MERGE_REQUEST_TARGET_BR
 export const CI_MERGE_REQUEST_TITLE = ENV.CI_MERGE_REQUEST_TITLE;
 
 /** The event type of the merge request. */
-export const CI_MERGE_REQUEST_EVENT_TYPE = ENV.CI_MERGE_REQUEST_EVENT_TYPE as
-  | 'detached'
-  | 'merged_result'
-  | 'merge_train';
+export const CI_MERGE_REQUEST_EVENT_TYPE = ENV.CI_MERGE_REQUEST_EVENT_TYPE as "detached" | "merged_result" | "merge_train";
 
 /** The version of the merge request diff. */
 export const CI_MERGE_REQUEST_DIFF_ID = ENV.CI_MERGE_REQUEST_DIFF_ID;

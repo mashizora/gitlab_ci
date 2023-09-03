@@ -14,7 +14,7 @@ $ProgressPreference = 'SilentlyContinue'
 
 if (Test-Path "$Env:DENO_DIR\bin\deno.exe") {
     Write-Host "Found deno in current workspace"
-    deno upgrade
+    deno.exe upgrade
 }
 else {
     Write-Host "Installing deno"
@@ -25,4 +25,4 @@ else {
     Write-Host "Deno was installed successfully"
 }
 
-deno -V
+deno.exe -V
